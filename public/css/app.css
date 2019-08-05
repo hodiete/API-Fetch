@@ -1,0 +1,104 @@
+.main-container{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+	width:500px;
+	margin-left: 20px;
+	border: 2px solid black;
+ 
+}
+
+.company{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-bottom: 1px solid black;
+}
+
+.profile{  
+	padding: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width:200px;
+	
+}
+
+.info{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+img{
+	border-radius:50%;
+	max-height: 150px;
+}
+
+#asc, #desc{
+	cursor: pointer;
+	display: inline-block;
+	letter-spacing: 2px; 
+
+}
+
+.selector-container{
+ text-align: center;
+}
+
+.toggle-switch{
+display: inline-block;	
+}
+
+.toggle-switch input[type=checkbox] {
+	display:none;
+}
+
+.toggle-switch label {
+	cursor:pointer;
+}
+
+.toggle-switch label .toggle-track {
+   display: inline-block;
+  height:40px;
+  width:200px;
+  background:#eee;
+  border-radius:20px;
+  position:relative;
+  border:1px solid #ccc;
+}
+
+.toggle-switch .toggle-track:before{
+  content:'';
+  display:inline-block;
+  height:40px;
+  width:40px;
+  padding-left: 40%;
+  background: green;
+  border-radius:20px;
+  position:absolute;
+  top:0;
+  right:0;
+  transition:right .2s ease-in;
+}
+
+.toggle-switch input[type="checkbox"]:checked + label .toggle-track:before{
+  background:green;
+  left: 0px;
+  padding-left: 40%;
+}
+
+input[type='search']{
+	outline: none;
+    border-radius: 10px;
+   width: 100%; 
+	
+}

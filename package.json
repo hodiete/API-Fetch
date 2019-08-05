@@ -1,0 +1,17 @@
+{
+  "name": "hatchway_challenge",
+  "version": "1.0.0",
+  "description": "Work Orders and profile App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "build": "node app.js"
+  },
+  "author": "Henry O.",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}

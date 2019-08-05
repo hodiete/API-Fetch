@@ -1,0 +1,74 @@
+
+<% include partials/header %>
+
+<h1> Work Orders and the profile of those who ordered </h1>
+<input type="search" name="" placeholder="Filter by worker name ..">
+
+<div class="selector-container">
+  <div id="asc">Earliest First</div>
+    <div class="toggle-switch" id="to">
+      <input type="checkbox" id="chkTest" name="chkTest" checked>
+          <label for="chkTest">
+             <span class="toggle-track"></span>
+          </label>
+    </div>
+  <div id="desc">Latest First</div>
+</div>
+
+<div class= "main-container desc">
+  <% sorter.sort(function(a, b){return b-a})%>
+  <% sorter.forEach (function(sorter){ %>
+    <% worker.forEach(function(workProfile){  %>
+       <% if (sorter===workProfile[1].deadline){ %>
+        <div class= "container">
+  	      <div class= "company">
+             <strong> <%= workProfile[1].name %> </strong>
+                <%= workProfile[1].description %>
+          </div>
+   	    <div class= "profile">
+          <img src='<%=workProfile[0].image%>'>
+          <div class= "info">
+              <strong><span><%= workProfile[0].name %> </span></strong>
+              <strong><%=workProfile[0].companyName %></strong>
+              <strong> <%= workProfile[0].email %></strong>
+          </div>
+        </div>
+        <%= new Date(workProfile[1].deadline) %>
+        <%}%>
+    <%})%>
+        </div>
+  <%})%>
+</div>
+
+<div class= "main-container asc">
+  <%sorter.sort(function(a, b){return a-b})%>
+  <% sorter.forEach (function(sorters){ %>
+    <% worker.forEach(function(workProfile){  %>
+      <% if (sorters===workProfile[1].deadline){ %>
+        <div class= "container">
+          <div class= "company">
+            <strong> <%= workProfile[1].name %> </strong>
+            <%= workProfile[1].description %>
+          </div>
+          <div class= "profile">
+            <img src='<%=workProfile[0].image%>'>
+            <div class= "info">
+              <strong><span><%= workProfile[0].name %> </span></strong>
+              <strong><%=workProfile[0].companyName %></strong>
+              <strong> <%= workProfile[0].email %></strong>
+            </div>
+          </div>
+        <%= new Date(workProfile[1].deadline) %>
+      <% }%>
+
+    <%})%>
+        </div>
+  <%})%>
+</div>
+
+
+<% include partials/footer %>
+
+
+
+
