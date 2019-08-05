@@ -1,6 +1,6 @@
 ## Instructions to run the hatchway challenge 
-`1`. Install packages using `npm Install`
-`2`. Run `node app.js` and go to `http://localhost:3000/`
+ 1. Install packages using `npm Install`
+ 2. Run `node app.js` and go to `http://localhost:3000/`
 
 
 ## Tools used
