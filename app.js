@@ -38,14 +38,14 @@ let getWorkerInfo = (order, workers) =>
   workers.find(worker => worker.id === order.workerId);
 
 function fetchWorkersApi(orderID) {
-  const p = orderID.map(
+  const workerInfos = orderID.map(
     async orders =>
       await axios.get(
         "https://www.hatchways.io/api/assessment/workers/" + orders
       )
   );
 
-  return Promise.all(p);
+  return Promise.all(workerInfos);
 }
 
 //ROUTES
