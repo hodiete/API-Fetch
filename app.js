@@ -22,8 +22,9 @@ fetchWorkOrdersApi()
   )
   .then(orders =>
     worker_orders.forEach(workOrder => {
+      const { deadline } = workOrder;
       WorkerWithOrders.push([getWorkerInfo(workOrder, orders), workOrder]);
-      sorter.push(workOrder.deadline);
+      sorter.push(deadline);
     })
   );
 
@@ -52,6 +53,6 @@ app.get("/", function(req, res) {
   res.render("home", { worker: WorkerWithOrders, sorter: sorter });
 });
 
-app.listen(3001, function(req, res) {
+app.listen(3000, function(req, res) {
   console.log("The challenge is running!");
 });
