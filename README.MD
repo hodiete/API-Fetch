@@ -1,4 +1,4 @@
-## Instructions to run the hatchway challenge 
+## Instructions to run 
  1. Install packages using `npm Install`
  2. Run `node app.js` and go to `http://localhost:3000/`
 
@@ -6,7 +6,7 @@
 ## Tools used
 1. NodeJS
 2. Express
-3. Request
+3. Axios
 4. Javascript (ES5 & ES6);
 5. JQuery
 6. CSS
